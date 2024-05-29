@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lilita One", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(#000072, rgb(51, 0, 94));
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px 30px;
+    width: 90%;
+    height: 500px;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 black;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.list {
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.list a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.list a button {
+    margin: 5px;
+    width: 25vw;
+    height: 5vh;
+    background-color: #c6c6c6;
+    font-weight: 800;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.list a button:hover {
+    transform: scale(1.1);
+}
+
+
+.volt {
+    width: 12vw;
+    height: 4vh;
+    margin-right: 5px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #a96262;
+    box-shadow: 0 0 10px 0 #a96262;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}

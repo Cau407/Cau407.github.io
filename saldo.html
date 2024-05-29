@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Saldo</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const saldoDiv = document.getElementById('saldoDiv');
+
+            const verSaldo = () => {
+                let saldo = parseFloat(localStorage.getItem('saldo')) || 1000;
+                const h2 = document.createElement('h2');
+                h2.textContent = `R$ ${saldo.toFixed(2)}`;
+                saldoDiv.innerHTML = "";
+                saldoDiv.appendChild(h2);
+            };
+            verSaldo();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Saldo:</h1>
+        <div id="saldoDiv">
+
+        </div>
+        <a href="./pagina3.html"><button class="volt">Voltar</button></a>
+    </div>
+</body>
+
+</html>

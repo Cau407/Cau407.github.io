@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Saque</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const saldoSaqueInput = document.getElementById('saque');
+            const saldoSaqueBtn = document.getElementById('confirmarSaque');
+
+            const attSaldoSaque = () => {
+                let saldo = parseFloat(localStorage.getItem('saldo')) || 1000;
+                const valorSaque = parseFloat(saldoSaqueInput.value);
+                if (!isNaN(valorSaque) && valorSaque > 0) {
+                    if (valorSaque <= saldo) {
+                        saldo -= valorSaque;
+                        localStorage.setItem('saldo', saldo);
+                        alert("Saque realizado com sucesso!");
+                        saldoSaqueInput.value = '';
+                    } else {
+                        alert("Saldo insuficiente para saque.");
+                    }
+                } else {
+                    alert("Insira um valor de saque válido.");
+                }
+            };
+
+            saldoSaqueBtn.addEventListener('click', attSaldoSaque);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quanto deseja sacar de sua conta?</h1>
+        <div class="buttonsContainer">
+            <input type="text" placeholder="Digite o valor do saque..." id="saque">
+            <a href=""><button type="button" id="confirmarSaque">Confirmar</button></a>
+            <a href="./pagina3.html"><button>Voltar</button></a>
+        </div>
+    </div>
+</body>
+
+</html>

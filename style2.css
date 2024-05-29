@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lilita One", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(#000072, rgb(51, 0, 94));
+}
+
+.container {
+    background-color: white;
+    padding: 20px 30px;
+    width: 90%;
+    height: 500px;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 black;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+#bradesco {
+    margin-top: 55px;
+    margin-bottom: 50px;
+}
+
+#itau {
+    margin-top: 55px;
+    margin-bottom: 56px;
+}
+
+#santander {
+    margin-top: 55px;
+    margin-bottom: 56px;
+}
+
+label {
+    /*usei a tag para organizar posição*/
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+label input {
+    /*style do campo de senha*/
+    width: 18vw;
+    padding: 2px;
+    margin: 10px;
+    text-align: center;
+}
+
+.avant {
+    width: 15vw;
+    height: 4vh;
+    border: none;
+    border-radius: 10px;
+    background-color: #b4c5e9;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.volt {
+    width: 10vw;
+    height: 4vh;
+    margin-right: 5px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #a96262;
+    box-shadow: 0 0 10px 0 #a96262;
+    font-weight: 800;
+    font-size: 13px;
+    cursor: pointer;
+}

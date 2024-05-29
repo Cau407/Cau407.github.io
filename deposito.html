@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Saque</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const saldoDepositoInput = document.getElementById('deposito');
+            const saldoDepositoBtn = document.getElementById('confirmarDeposito');
+
+            const attSaldoDeposito = () => {
+                let saldo = parseFloat(localStorage.getItem('saldo')) || 1000;
+                const valorDeposito = parseFloat(saldoDepositoInput.value);
+                if (!isNaN(valorDeposito) && valorDeposito > 0) {
+                    saldo += valorDeposito;
+                    localStorage.setItem('saldo', saldo);
+                    alert("Depósito realizado com sucesso!");
+                    saldoDepositoInput.value = '';
+                } else {
+                    alert("Insira um valor de depósito válido.");
+                }
+            };
+
+            saldoDepositoBtn.addEventListener('click', attSaldoDeposito);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quanto deseja depositar em sua conta?</h1>
+        <div class="buttonsContainer">
+            <input type="text" placeholder="Digite o valor do saque..." id="deposito">
+            <a href=""><button type="button" id="confirmarDeposito">Confirmar</button></a>
+            <a href="./pagina3.html"><button>Voltar</button></a>
+        </div>
+    </div>
+</body>
+
+</html>

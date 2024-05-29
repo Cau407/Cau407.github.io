@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style1.css">
+    <title>Caixa Eletrônico</title>
+</head>
+
+<body><!--Pagiana 1: Criei uma div para as imagens e dei uma class para elas-->
+
+    <div class="container">
+
+        <!--Eu editei o tamanho das imagens por aqui mesmo. fiz uma estilização no css para crescer a escala quando passar o mouse por cima.-->
+        <h1>Selecione um Banco!</h1>
+        <div class="bancos">
+            <!--Para cada imagem ancorei um arquivo em html com a logo do banco selecionado e a validação de senha do usuario-->
+            <a href="./caixa.html" class="selectable-item"><img src="./img/caixa.png" alt="Caixa" width="110px"></a>
+            <a href="./bradesco.html" class="selectable-item"><img src="./img/bradesco.png" alt="Bradesco"
+                    width="90px"></a>
+            <a href="./itau.html" class="selectable-item"><img src="./img/itau.png" alt="Itau" width="65px"></a>
+            <a href="./santander.html" class="selectable-item"><img src="./img/santander.png" alt="Santander"
+                    width="60px"></a>
+        </div>
+
+        <!--Botão normal de voltar ancorado com a pagina inicial-->
+        <a href="./index.html"><button class="volt">Voltar</button></a>
+    </div>
+
+    <script src="./scrypt.js"></script>
+</body>
+
+</html>
